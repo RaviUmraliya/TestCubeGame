@@ -19,7 +19,34 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tlNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@color/white"
+        app:boxStrokeColor="@color/blue"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:textSize="16sp"
+            android:inputType="number|none"
+            android:digits="0123456789"
+            android:hint="Enter any number"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
         android:id="@+id/etNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -27,9 +54,11 @@
         android:digits="0123456789"
         android:hint="Please enter number"
         android:inputType="number"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="@color/black"
         android:textSize="16sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
@@ -41,8 +70,8 @@
         android:layout_marginTop="25dp"
         android:text="Next"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@id/etNumber"
-        app:layout_constraintStart_toStartOf="@id/etNumber"
-        app:layout_constraintTop_toBottomOf="@id/etNumber" />
+        app:layout_constraintEnd_toEndOf="@id/tlNumber"
+        app:layout_constraintStart_toStartOf="@id/tlNumber"
+        app:layout_constraintTop_toBottomOf="@id/tlNumber" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

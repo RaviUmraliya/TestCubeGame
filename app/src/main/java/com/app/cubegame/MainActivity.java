@@ -1,6 +1,7 @@
 package com.app.cubegame;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.DigitsKeyListener;
@@ -18,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText etNumber = findViewById(R.id.etNumber);
+        EditText etNumber = findViewById(R.id.etNum);
         MaterialButton btnNext = findViewById(R.id.btnNext);
-        etNumber.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
-        etNumber.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
+//        etNumber.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
+//        etNumber.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
 
         btnNext.setOnClickListener((v) -> {
             if (etNumber.getText().toString().isEmpty()) {
